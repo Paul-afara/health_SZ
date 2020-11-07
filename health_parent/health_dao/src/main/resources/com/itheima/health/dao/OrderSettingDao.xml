@@ -25,4 +25,8 @@
     <update id="editReservationsByOrderDate" parameterType="OrderSetting">
         update t_ordersetting set reservations = reservations+1 where orderDate = #{orderDate} and number&gt;reservations
     </update>
+
+    <delete id="deleteOrderSettingByDate" parameterType="string">
+        delete from t_ordersetting where orderDate &gt;= #{date};
+    </delete>
 </mapper>

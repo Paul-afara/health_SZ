@@ -48,5 +48,6 @@ public class CleanImgJob {
             log.error("清理垃圾图片出错了",e);
         }
     }
+
 }
 

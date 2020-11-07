@@ -8,6 +8,7 @@ import com.itheima.health.service.OrderSettingService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.Date;
 import java.util.List;
 import java.util.Map;
 
@@ -88,5 +89,10 @@ public class OrderSettingServiceImpl implements OrderSettingService {
             //  - 添加预约设置
             orderSettingDao.add(orderSetting);
         }
+    }
+
+    @Override
+    public void deleteOrderSettingByDate(String date) {
+        orderSettingDao.deleteOrderSettingByDate(date);
     }
 }
